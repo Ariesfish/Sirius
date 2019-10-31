@@ -1,11 +1,13 @@
-package io.github.ariesfish.sirius
+package io.github.ariesfish.sirius.ui
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+import io.github.ariesfish.sirius.R
+import io.github.ariesfish.sirius.ui.base.BaseAppCompatActivity
+
+class MainActivity : BaseAppCompatActivity() {
 
     private lateinit var textMessage: TextView
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -24,6 +26,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         false
+    }
+
+    override fun initView(savedInstanceState: Bundle?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
